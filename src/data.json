@@ -1,0 +1,42 @@
+{
+    "questions": [
+      "Hva hadde du til frokost i dag?",
+      "Hvordan kommer du deg vanligvis til jobb eller skole?",
+      "Hvilken bok leste du sist, og hva handlet den om?",
+      "Hva er din favorittaktivitet på fritiden?",
+      "Hvilken type musikk liker du best?",
+      "Hva er den beste filmen du har sett i det siste?",
+      "Hvilken norsk by vil du anbefale å besøke, og hvorfor?",
+      "Hva pleier du å gjøre i helgene?",
+      "Hva er din favorittrett, og hvordan lager du den?"
+    ],
+    "answers": [
+      "Jeg hadde havregryn med banan og honning.",
+      "Jeg sykler som regel, hvis været er fint.",
+      "Jeg leste 'Harry Potter og de vises stein', det er en fantasibok.",
+      "Jeg liker å gå lange turer i naturen.",
+      "Jeg er veldig glad i jazzmusikk.",
+      "Den beste filmen jeg har sett nylig er 'Inception', veldig spennende.",
+      "Bergen, på grunn av de vakre fjordene og historiske stedene.",
+      "Jeg liker å slappe av hjemme eller møte venner.",
+      "Min favorittrett er taco. Jeg bruker krydret kjøtt, friske grønnsaker og hjemmelaget salsa."
+    ],
+    "pairs": [
+      {
+        "question": "Hvilken sport er mest populær i Norge?",
+        "answer": "Langrenn er veldig populært, spesielt om vinteren.",
+        "approved": false
+      },
+      {
+        "question": "Hva er typisk norsk mat?",
+        "answer": "Mange vil si kjøttkaker i brun saus, fiskesuppe, og lefse.",
+        "approved": true
+      },
+      {
+        "question": "Hva kjennetegner norsk sommer?",
+        "answer": "Lange dager, korte netter, og ofte ganske varmt.",
+        "approved": false
+      }
+    ]
+  }
+  
