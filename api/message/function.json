@@ -1,19 +1,18 @@
 {
   "bindings": [
     {
-      "authLevel": "anonymous",
+      "authLevel": "function",
       "type": "httpTrigger",
       "direction": "in",
       "name": "req",
-      "methods": [
-        "get",
-        "post"
-      ]
+      "methods": ["post"]
     },
     {
-      "type": "http",
+      "type": "blob",
       "direction": "out",
-      "name": "res"
+      "name": "$return",
+      "path": "v1/{rand-guid}.json",
+      "connection": "AZURE_STORAGE_CONNECTION_STRING"
     }
   ]
 }

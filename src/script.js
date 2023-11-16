@@ -1,4 +1,9 @@
 let data = {};
+const result = {
+    answers:[],
+    questions:[],
+    ratings:[]
+};
 document.addEventListener('DOMContentLoaded', () => {
     fetchDataFromServer().then(d => {
         data = d;
@@ -83,6 +88,7 @@ function handleFormSubmit(event) {
 
     // Do something with the answers, like displaying the next step
     console.log('Collected Answers:', answers);
+    result.answers = answers;
     displayAnswerCreation();
 }
 
@@ -133,6 +139,7 @@ function handleQuestionFormSubmit(event) {
 
     // Do something with the questions, like displaying the next step
     console.log('Created Questions:', questions);
+    result.questions = questions;
     displayRating();
 }
 
@@ -183,6 +190,10 @@ function handlePairRatingSubmit(event) {
 
     // Do something with the ratings, like sending them to the server
     console.log('Pair Ratings:', ratings);
+    result.ratings = ratings;
+
+    postDataToAPI(result);
+    
     // Proceed with the next step or end the app flow
     displayThankYouMessage();
 }
@@ -218,4 +229,15 @@ function displayThankYouMessage() {
 // Additional functions for other steps...
 
 function postDataToAPI(data) {
-    }
+    console.log('posting data',data);
+    fetch('/message', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+    })
+    .then(response => response.json())
+    .then(data => console.log('Success:', data))
+    .catch((error) => console.error('Error:', error));
+}
