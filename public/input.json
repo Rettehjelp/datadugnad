@@ -21,7 +21,7 @@
       "Jeg liker å slappe av hjemme eller møte venner.",
       "Min favorittrett er taco. Jeg bruker krydret kjøtt, friske grønnsaker og hjemmelaget salsa."
     ],
-    "pairs": [
+    "validations": [
       {
         "question": "Hvilken sport er mest populær i Norge?",
         "answer": "Langrenn er veldig populært, spesielt om vinteren.",
