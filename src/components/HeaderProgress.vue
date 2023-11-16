@@ -20,7 +20,7 @@ const progressPercentage = computed(() => {
   <div>
     <p>{{ props.name }}</p>
     <p>{{ props.description }}</p>
-    <p>Progress: {{ progressPercentage }}%</p>
+    <!-- <p>Progress: {{ progressPercentage }}%</p> -->
   </div>
 </template>
 

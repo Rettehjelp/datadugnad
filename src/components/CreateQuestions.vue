@@ -19,11 +19,19 @@ const submitQuestions = () => {
 
 <template>
   <div>
-    <div v-for="(answer, index) in props.answers" :key="index">
-      <input v-model="questions[index]" type="text" :placeholder="'Spørsmål ... ' + (index + 1)">
-      <p>Svar: {{ index + 1 }}: {{ answer }}</p>
+    <div  v-for="(answer, index) in props.answers" :key="index">
+      <div class="col-sm-6">
+              <!-- <label  class="form-label">Spørsmål {{(index + 1)}}</label> -->
+              <input  v-model="questions[index]" type="text" class="form-control" required :placeholder="'Spørsmål ' + (index + 1)">
+              <div class="invalid-feedback">
+                Valid first name is required.
+              </div>
+              <p  class="form-label">Svar {{ index + 1 }}: {{ answer }}</p>
+          </div>
+
     </div>
-    <button @click="submitQuestions">Next</button>
+    <hr/>
+    <button class="btn btn-success" @click="submitQuestions">Neste</button>
   </div>
 </template>
 
