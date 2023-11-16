@@ -5,15 +5,17 @@ const props = defineProps({
   questions: Array
 });
 
-const answers = ref(props.questions.map(() => ''));  // Initialize an answers array based on the questions
+const answers = ref(props.questions?.map(() => '') || []);  // Initialize an answers array based on the questions
 const emits = defineEmits(['submitAnswers']);
 
 const submitAnswers = () => {
+  if (props.questions ){
   const results = props.questions.map((question, index) => ({
     question: question,
     answer: answers.value[index]
   }));
   emits('submitAnswers', results);
+}
 };
 </script>
 

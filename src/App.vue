@@ -8,10 +8,10 @@ import HeaderProgress from './components/HeaderProgress.vue';
 // State
 const data = ref<any>(null);
 const currentStep = ref('questions'); // 'questions', 'answers', 'validations', 'thankYou'
-const submissions = ref([]);
-const randomQuestions = ref([]);
-const randomAnswers = ref([]);
-const randomValidations = ref([]);
+const submissions = ref<any>([]);
+const randomQuestions = ref<any>([]);
+const randomAnswers = ref<any>([]);
+const randomValidations = ref<any>([]);
 
 
 // Random selection function
@@ -31,21 +31,21 @@ onMounted(async () => {
 
 
 // Event Handlers
-const handleQuestionSubmission = (answers) => {
+const handleQuestionSubmission = (answers:any) => {
   // Store answers and transition to the next step
   submissions.value.push(...answers);
   randomAnswers.value = selectRandomItems(data.value.answers, 3);
   currentStep.value = 'answers';
 };
 
-const handleAnswerSubmission = (questions) => {
+const handleAnswerSubmission = (questions:any) => {
   // Store questions and transition to the next step
   submissions.value.push(...questions);
   randomValidations.value = selectRandomItems(data.value.validations, 3);
   currentStep.value = 'validations';
 };
 
-const handleValidationSubmission = (validations) => {
+const handleValidationSubmission = (validations:any) => {
   // Store validations and transition to the thank you step
   submissions.value.push(...validations);
   currentStep.value = 'thankYou';
@@ -55,7 +55,7 @@ const handleValidationSubmission = (validations) => {
   postDataToAPI(submissions.value);
 };
 
-const postDataToAPI = (data) => {
+const postDataToAPI = (data:any) => {
     console.log('Posting data:', data);
 
     fetch('/message', {

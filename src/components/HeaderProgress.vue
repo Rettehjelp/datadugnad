@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed } from 'vue';
+// import { computed } from 'vue';
 
 const props = defineProps({
   name: String,
@@ -8,12 +8,12 @@ const props = defineProps({
 });
 
 // Progress calculation (e.g., as a percentage)
-const progressPercentage = computed(() => {
-  // Assuming a total of 9 steps (3 questions, 3 answers, 3 validations)
-  const totalSteps = 9;
-  const completedSteps = props.progress.length;
-  return (completedSteps / totalSteps) * 100;
-});
+// const progressPercentage = computed(() => {
+//   // Assuming a total of 9 steps (3 questions, 3 answers, 3 validations)
+//   const totalSteps = 9;
+//   const completedSteps = props.progress.length;
+//   return (completedSteps / totalSteps) * 100;
+// });
 </script>
 
 <template>
