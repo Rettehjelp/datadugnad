@@ -58,7 +58,7 @@ const handleValidationSubmission = (validations:any) => {
 const postDataToAPI = (data:any) => {
     console.log('Posting data:', data);
 
-    fetch('/message', {
+    fetch('https://datadugnad-api.azurewebsites.net/api/message', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
