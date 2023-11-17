@@ -1,0 +1,12 @@
+---
+import { SITE } from '~/utils/config';
+import { Image } from 'astro:assets';
+import logoImage from '../assets/images/rettehjelplogo2.png';
+---
+
+<span class="self-center ml-2 rtl:ml-0 rtl:mr-2 text-2xl md:text-xl font-bold text-gray-900 whitespace-nowrap dark:text-white " >
+ 
+    
+  <Image src={logoImage} alt="logo for rettehjelp" style="display:inline; " width={35} height={35} ></Image> 
+  {SITE?.name}
+</span>
