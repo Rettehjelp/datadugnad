@@ -25,16 +25,16 @@ const submitValidations = () => {
 
 <template>
   <div>
-    <div  v-for="(validation, index) in props.validations" :key="index">
+    <div class="mt-2"  v-for="(validation, index) in props.validations" :key="index">
       <div v-if="validation" >
-        <p><strong>Question:</strong> {{ validation.question }}</p>
-        <p><strong>Answer:</strong> {{ validation.answer }}</p>
+        <p> {{ validation.question }}</p>
+        <p> {{ validation.answer }}</p>
       </div>
-      <button class="btn btn-danger btn-sm" @click="setValidation(index, true)">OK</button>
-      <button class="btn btn-success btn-sm" @click="setValidation(index, false)">Feil</button>
+      <button class=" py-2 px-4 rounded-full" @click="setValidation(index, true)">OK</button>
+      <button class=" py-2 px-4 rounded-full" @click="setValidation(index, false)">Feil</button>
     </div>
     <hr/>
-    <button class="btn btn-success" @click="submitValidations">Send inn</button>
+    <button class="mt-3 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full" @click="submitValidations">Send inn</button>
   </div>
 </template>
 

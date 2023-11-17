@@ -23,17 +23,17 @@ const submitAnswers = () => {
   <div>
     <div  v-for="(question, index) in props.questions" :key="index">
 
-      <div class="col-sm-6">
-              <label for="firstName" class="form-label">{{ question }}</label>
+      <div class="mt-3">
+              <label for="firstName" class="block">{{ question }}</label>
               <input v-model="answers[index]" type="text" class="form-control" required :placeholder="'Answer ' + (index + 1)">
-              <div class="invalid-feedback">
+              <!-- <div class="invalid-feedback">
                 Valid first name is required.
-              </div>
+              </div> -->
           </div>
       
     </div>
     <hr/>
-    <button class="btn btn-success mt-3" @click="submitAnswers">Neste</button>
+    <button class="mt-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full" @click="submitAnswers">Neste</button>
   </div>
 </template>
 

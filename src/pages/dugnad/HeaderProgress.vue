@@ -18,8 +18,8 @@ const props = defineProps({
 
 <template>
   <div>
-    <p>{{ props.name }}</p>
-    <p>{{ props.description }}</p>
+    <p class="text-2xl">{{ props.name }}</p>
+    <p class="text-xs">{{ props.description }}</p>
     <!-- <p>Progress: {{ progressPercentage }}%</p> -->
   </div>
 </template>
