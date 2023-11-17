@@ -1,0 +1,79 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import HeroText from '~/components/widgets/HeroText.astro';
+import ContactUs from '~/components/widgets/Contact.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+
+const metadata = {
+  title: 'Kontakt',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- HeroText Widget ******************* -->
+
+  <!-- <HeroText tagline="Contact" title="La oss ta en prat!" /> -->
+
+  <!-- <ContactUs
+    title="Drop us a message today!"
+    subtitle="For quicker answers, explore our FAQs section. You may find the solution you're looking  for right there! If not, our support team is delighted to help you."
+    inputs={[
+      {
+        type: 'text',
+        name: 'name',
+        label: 'Name',
+      },
+      {
+        type: 'email',
+        name: 'email',
+        label: 'Email',
+      },
+    ]}
+    textarea={{
+      label: 'Message',
+    }}
+    disclaimer={{
+      label:
+        'By submitting this contact form, you acknowledge and agree to the collection of your personal information.',
+    }}
+    description="Our support team typically responds within 24 business hours."
+  /> -->
+
+  <!-- Features2 Widget ************** -->
+
+  <Features2
+    title="Vi er her for å hjelpe deg!"
+    items={[
+      {
+        title: 'Generell støtte',
+        description: `Chat med oss for henvendelser relatert til kontoadministrasjon, navigering på nettsiden, betalingsproblemer, tilgang til kjøpte maler eller generelle spørsmål om nettsidens funksjonalitet.`,
+      },
+      {
+        title: 'Kontakt salg',
+        description:
+          'Chat med oss for spørsmål om kjøp, tilpasningsmuligheter, lisensiering for kommersiell bruk, henvendelser om spesifikke maler, etc.',
+      },
+      {
+        title: 'Teknisk støtte',
+        description:
+          'Chat med oss hvis du møter problemer som malinstallasjon, redigeringsvanskeligheter, kompatibilitetsproblemer med programvare, nedlastingsfeil eller andre tekniske utfordringer relatert til bruk av malene.',
+      },
+      {
+        title: 'Telefon',
+        description: '+47 95271895',
+        icon: 'tabler:headset',
+      },
+      {
+        title: 'E-post',
+        description: 'post@rettehjelp.no',
+        icon: 'tabler:mail',
+      },
+      {
+        title: 'Lokasjon',
+        description: 'Skien, Norge',
+        icon: 'tabler:map-pin',
+      },
+    ]}
+    
+  />
+</Layout>

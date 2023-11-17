@@ -1,0 +1,145 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import HeroText from '~/components/widgets/HeroText.astro';
+import Prices from '~/components/widgets/Pricing.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
+import Steps from '~/components/widgets/Steps.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: 'Pricing',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- HeroText Widget ******************* -->
+
+
+
+  <!-- Pricing Widget ******************* -->
+  <Prices
+  title="Våre priser"
+  subtitle="Betal kun for det du trenger"
+  prices={[
+    {
+      title: 'Personlig',
+      subtitle: 'For en lærer',
+      price: 'kr 0,-',
+      period: 'per måned',
+      items: [
+        {
+          description: 'Inntil 50 elevbesvarelser per måned',
+        },
+        {
+          description: 'Standard ChatGPT-3 støtte',
+        },
+        {
+          description: 'Grunnleggende brukerstøtte',
+        },
+        {
+          description: 'Standard sikkerhetsfunksjoner',
+        },
+      ],
+      callToAction: {
+        target: '_blank',
+        text: 'Kom i gang',
+        href: '#',
+      },
+      hasRibbon: true,
+      ribbonTitle: 'gratis',
+    },
+    {
+      title: 'Per skole',
+      subtitle: 'Kontakt oss for tilbud',
+      price: "-",
+      period: 'Per Måned',
+      items: [
+        {
+          description: 'Inntil 500 elevbesvarelser per måned',
+        },
+        {
+          description: 'Valgfri ChatGPT-3 eller ChatGPT-4 støtte',
+        },
+        {
+          description: 'Utvidet brukerstøtte',
+        },
+        {
+          description: 'Avanserte sikkerhetsfunksjoner',
+        },
+        {
+          description: 'Tilpassede integrasjoner',
+        },
+      ],
+      callToAction: {
+        target: '_blank',
+        text: 'Kom i gang',
+        href: '#',
+      },
+    },
+    {
+      title: 'Fylkeskommune / kommune',
+      subtitle: 'Kontakt oss for tilbud',
+      price: "-",
+      period: 'Per Måned',
+      items: [
+        {
+          description: 'Ubegrenset antall elevbesvarelser',
+        },
+        {
+          description: 'Egen dedikert språkmodell',
+        },
+        {
+          description: 'Prioritert brukerstøtte',
+        },
+        {
+          description: 'Tilpassede sikkerhetsprotokoller',
+        },
+        {
+          description: 'API-tilgang for integrasjoner',
+        },
+      ],
+      callToAction: {
+        target: '_blank',
+        text: 'Kom i gang',
+        href: '#',
+      },
+    },
+  ]}
+/>
+
+
+  <!-- FAQs Widget ******************* -->
+
+  <FAQs
+  title="Pris - Ofte Stilte Spørsmål"
+  subtitle="Valg av riktig plan er viktig, og vi er her for å svare på dine spørsmål. Hvis du har spørsmål om våre priser, er du på rett sted."
+  columns={1}
+  items={[
+    {
+      title: 'Hvorfor er den personlige versjonen av Rettehjelp gratis?',
+      description:
+        'Vi tror sterkt på å gi lærere tilgang til innovative verktøy som kan forbedre deres arbeidsflyt. Ved å tilby en gratis versjon av Rettehjelp ønsker vi å gi enkeltpersoner muligheten til å teste og se fordelene ved bruk av AI-assistert retting uten økonomiske barrierer. Dette gir også verdifull tilbakemelding som hjelper oss med å forbedre tjenesten videre.',
+    },
+    {
+      title: 'Hvordan finansieres den gratis versjonen?',
+      description:
+        'Den gratis versjonen av Rettehjelp er delvis finansiert av inntektene vi genererer fra våre betalte versjoner som er rettet mot skoler, fylkeskommuner og kommuner. Vi ser også på den gratis versjonen som en investering i fremtiden, da fornøyde brukere ofte fører til positive anbefalinger og større adopsjon i større institusjoner.',
+    },
+    {
+      title: 'Er det noen skjulte kostnader med den gratis versjonen?',
+      description:
+        'Nei, det er ingen skjulte kostnader med den personlige versjonen av Rettehjelp. Du får tilgang til alle funksjoner som er oppført under "Personlig" uten noen ekstra kostnader. Imidlertid er det begrensninger på antall elevbesvarelser du kan behandle per måned.',
+    },
+    {
+      title: 'Vil prisen endre seg i fremtiden?',
+      description:
+        'Selv om vi for øyeblikket tilbyr en gratis personlig versjon, kan priser og funksjoner endres i fremtiden basert på brukerfeedback, operasjonelle kostnader og andre faktorer. Men eventuelle endringer vil bli kommunisert tydelig til våre brukere på forhånd.',
+    },
+  ]}
+/>
+
+  <!-- CallToAction Widget *********** -->
+
+
+</Layout>
